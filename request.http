@@ -1,0 +1,76 @@
+### Auth Routes
+
+POST https://fast-ravine-16741.herokuapp.com/api/auth
+Content-Type: application/json
+
+{
+    "email":"example@gmail.com",
+    "password":"12345"
+}
+
+
+###
+POST https://fast-ravine-16741.herokuapp.com/api/users
+Content-Type: application/json
+
+{
+    "email":"example@gmail.com",
+    "password":"12345",
+    "name":"Jurayev Mansur",
+    "isAdmin":true
+}
+
+
+###
+POST https://fast-ravine-16741.herokuapp.com/api/auth
+Content-Type: application/json
+
+{
+    "email":"example@gmail.com",
+    "password":"12345"
+}
+
+###
+GET https://fast-ravine-16741.herokuapp.com/api/users
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3Y2M0MGM1NmQxYzdmMjViMDk0YTgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYyMTI1NDV9.9zTegJ88j1kE77dERHOqG7XZdIrmR7WRDcM4aWcBMcE
+###
+GET https://fast-ravine-16741.herokuapp.com/api/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3Y2M0MGM1NmQxYzdmMjViMDk0YTgiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYyMTI1NDV9.9zTegJ88j1kE77dERHOqG7XZdIrmR7WRDcM4aWcBMcE
+
+
+
+###Posts Routes
+
+###
+GET https://fast-ravine-16741.herokuapp.com/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3N2E4MGM1NmQxYzdmMjViMDg1MWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYxOTE2Mjh9.SU-AOv8ni8aWmYblA4a41XqYEyQsEyNTdqFPP97iGqI
+
+###
+POST https://fast-ravine-16741.herokuapp.com/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3N2E4MGM1NmQxYzdmMjViMDg1MWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYxOTE2Mjh9.SU-AOv8ni8aWmYblA4a41XqYEyQsEyNTdqFPP97iGqI
+Content-Type: application/json
+
+{
+    "title":"Lorem ipsum dolor",
+    "body":"lorem body"
+}
+
+
+###
+GET https://fast-ravine-16741.herokuapp.com/api/posts/62b5923544840ac7507902d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3N2E4MGM1NmQxYzdmMjViMDg1MWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYxOTE2Mjh9.SU-AOv8ni8aWmYblA4a41XqYEyQsEyNTdqFPP97iGqI
+
+###
+DELETE https://fast-ravine-16741.herokuapp.com/api/posts/62b5910c44840ac7507902c9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3N2E4MGM1NmQxYzdmMjViMDg1MWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYxOTE2Mjh9.SU-AOv8ni8aWmYblA4a41XqYEyQsEyNTdqFPP97iGqI
+
+
+###
+PUT https://fast-ravine-16741.herokuapp.com/api/posts/62b5923544840ac7507902d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI3N2E4MGM1NmQxYzdmMjViMDg1MWUiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2NTYxOTE2Mjh9.SU-AOv8ni8aWmYblA4a41XqYEyQsEyNTdqFPP97iGqI
+Content-Type: application/json
+
+{
+    "title":"lorem title",
+    "body":"Lorem changed12 title"
+}
